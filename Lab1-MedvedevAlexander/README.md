@@ -1,11 +1,11 @@
-# LAB1_Kruglov
+# Lab1-MedvedevAlexander
 # Лаборатоная работа 1
 ## Задание
 Спроектировать и разработать систему авторизации пользователей на протоколе HTTP
 ## Ход работы
 - Разработаем пользовательский интерфейс и опишем пользовательские сценарии работы
 
-![Рис. 1 - Интерфейс](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/интерфейс.png)
+![Рис. 1 - Интерфейс](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/интерфейс.png)
 
 Первоначально пользователь попадает на форму входа (sign-in.php). Затем, если у него есть аккаунт, то он вводит логин и пароль и входит в свой аккаунт, нажав кнопку “sing in”. В случае корректного ввода пользователь перенаправляется на главную страницу (index.php). Если же он ввел что-то неправильно, то возвращается на эту же страницу, но вверху будет написано сообщение о его ошибке.
 
@@ -18,38 +18,38 @@
 
 - Опишем хореографию
 
-![Рис. 2 - Хореография](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Хореография.png)
+![Рис. 2 - Хореография](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Хореография.png)
 - Опишем структуру базы данных
 
 | Название | Тип данных | Длина | Описание                                          |
 |----------|------------|-------|---------------------------------------------------|
-| ID       | int        |       | Ключевое поле                                     |
+| ID       | int        | 255   | Ключевое поле                                     |
 | NAME     | varchar    | 40    | Имя пользователя                                  |
 | LOGIN    | varchar    | 40    | Логин пользователя                                |
-| HASH     | varchar    | 400   | Хеш пароля и соли пользователя                    |
+| HASH     | varchar    | 255   | Хеш пароля и соли пользователя                    |
 | SALT     | varchar    | 20    | Уникальная соль пользователя                      |
 
 - Опишем алгоритмы 
 
 1. Регистрируем пользователя (registration.php)
  
- ![](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Регистрация.png)
+ ![](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Регистрация.png)
   
   2. Входим в аккаунт (auth.php)
   
-  ![](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Вход.png)
+  ![](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Вход.png)
   
   3. Выходим из аккаунта (exit.php)
   
-  ![](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Выход.png)
+  ![](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Выход.png)
   
   4. Меняем пароль, если мы его забыли (forgot_pass.php)
   
-  ![](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Забыл%20пароль.png)
+  ![](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Забыл%20пароль.png)
   
   6. Меняем пароль, если мы вошли в аккаунт и захотели его сменить (change_pass.php)
   
-  ![](https://github.com/MAXKRUG24/LAB1_Kruglov/blob/main/Смена%20пароля.png)
+  ![](https://github.com/Tqmen/laba1/blob/main/Lab1-MedvedevAlexander/Смена%20пароля.png)
 
 ## Вывод
 Спроектировали и разработали систему авторизации пользователей на протоколе HTTP
